@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahtzee Dice Roller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="rollAllDice()">
+
+  <main class="table">
+
+    <header class="marquee">
+      <h1>Yahtzee <span>Dice Roller</span></h1>
+      <p class="tagline">Five dice. One roll. Whatever the felt gives you.</p>
+    </header>
+
+    <section class="rack" aria-label="Dice results">
+      <div class="die-slot">
+        <label for="die1">Die 1</label>
+        <input type="text" id="die1" class="die-face" value="1" readonly aria-readonly="true" />
+      </div>
+      <div class="die-slot">
+        <label for="die2">Die 2</label>
+        <input type="text" id="die2" class="die-face" value="1" readonly aria-readonly="true" />
+      </div>
+      <div class="die-slot">
+        <label for="die3">Die 3</label>
+        <input type="text" id="die3" class="die-face" value="1" readonly aria-readonly="true" />
+      </div>
+      <div class="die-slot">
+        <label for="die4">Die 4</label>
+        <input type="text" id="die4" class="die-face" value="1" readonly aria-readonly="true" />
+      </div>
+      <div class="die-slot">
+        <label for="die5">Die 5</label>
+        <input type="text" id="die5" class="die-face" value="1" readonly aria-readonly="true" />
+      </div>
+    </section>
+
+    <section class="total-row">
+      <label for="total">Total</label>
+      <input type="text" id="total" class="total-field" value="5" readonly aria-readonly="true" />
+    </section>
+
+    <button id="rollBtn" class="roll-btn" onclick="rollAllDice()" autofocus>
+      Roll the dice
+    </button>
+
+    <p id="rollCount" class="roll-count">Rolls this turn: 0</p>
+
+    <section class="instructions">
+      <h2>How to play</h2>
+      <p>
+        Yahtzee is played with five six-sided dice. On your turn you may roll all five dice
+        up to three times, keeping any dice you like between rolls, as you try to build the
+        best-scoring combination. This app handles only the rolling: press
+        <strong>Roll the dice</strong> (or hit <strong>Enter</strong>) to roll all five dice
+        and see fresh results and their total above. A set of dice is rolled for you
+        automatically as soon as the page opens.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
