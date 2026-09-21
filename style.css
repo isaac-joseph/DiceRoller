@@ -132,9 +132,9 @@ body {
 /* Instructions */
 .instructions {
     margin-top: 40px;
-    padding: 35px;
+    padding: 25px;
 
-    background-color: #ffe083;
+    background-color: black;
     border-radius: 30px;
 
     text-align: center;
